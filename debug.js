@@ -1,4 +1,4 @@
-// Sandboxels Debug & God Mode Tools Mod (Injected into 'WorldEdit' Tab)
+// Sandboxels Debug & God Mode Tools Mod (Injected into 'worldEdit' Tab)
 
 runAfterLoad(function() {
     if (!elements.debug_inspector) {
@@ -18,7 +18,7 @@ runAfterLoad(function() {
                 console.log("[DEBUG INSPECTOR]", pixel);
                 logMessage(info);
             },
-            category: "worldedit", // Puts it right in the WorldEdit tab!
+            category: "worldEdit", // Correct case-sensitive category ID
             desc: "Inspects pixel coordinates, temperature, charge, and internal properties."
         };
 
@@ -29,7 +29,7 @@ runAfterLoad(function() {
                 pixel.temp += 500;
                 pixelTempCheck(pixel);
             },
-            category: "worldedit",
+            category: "worldEdit",
             desc: "Rapidly heats pixels by +500°C per tick."
         };
 
@@ -40,7 +40,7 @@ runAfterLoad(function() {
                 pixel.temp = -273.15;
                 pixelTempCheck(pixel);
             },
-            category: "worldedit",
+            category: "worldEdit",
             desc: "Instantly drops pixel temperature to Absolute Zero (-273.15°C)."
         };
 
@@ -51,7 +51,7 @@ runAfterLoad(function() {
                 pixel.temp = 20;
                 pixelTempCheck(pixel);
             },
-            category: "worldedit",
+            category: "worldEdit",
             desc: "Resets pixel temperature to 20°C."
         };
 
@@ -62,7 +62,7 @@ runAfterLoad(function() {
                 pixel.charge = 1;
                 pixel.chargeCD = 5;
             },
-            category: "worldedit",
+            category: "worldEdit",
             desc: "Forces an electrical charge onto any pixel."
         };
 
@@ -78,7 +78,7 @@ runAfterLoad(function() {
                     changePixel(pixel, transmuteTarget);
                 }
             },
-            category: "worldedit",
+            category: "worldEdit",
             desc: "Converts pixels into a target element. Shift-click to copy element."
         };
 
@@ -88,7 +88,7 @@ runAfterLoad(function() {
             tool: function(pixel) {
                 deletePixel(pixel.x, pixel.y);
             },
-            category: "worldedit",
+            category: "worldEdit",
             desc: "Silently deletes pixels from the grid without triggering reactions."
         };
 
@@ -101,7 +101,7 @@ runAfterLoad(function() {
                     info.tick(pixel);
                 }
             },
-            category: "worldedit",
+            category: "worldEdit",
             desc: "Forces the target pixel to execute its behavior tick rapidly."
         };
     }
@@ -150,5 +150,5 @@ runAfterLoad(function() {
         }
     });
 
-    console.log("%c[Debug Tools Loaded into 'WorldEdit' Tab]", "color: #00ffcc; font-weight: bold;");
+    console.log("%c[Debug Tools Loaded into 'worldEdit' Tab]", "color: #00ffcc; font-weight: bold;");
 });
